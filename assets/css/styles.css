@@ -226,3 +226,70 @@ footer {
 .privacidad p {
     margin-bottom: 1rem;
 }
+
+/* Menú móvil */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    header nav ul.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-popup button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-popup button#accept {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cookie-popup button#reject {
+    background-color: #f44336;
+    color: white;
+}
+
+
