@@ -159,3 +159,53 @@ footer {
         padding: 0 0.5rem;
     }
 }
+/* Sección Contacto */
+.contacto {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+.contacto h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "PlayfairDisplay", serif;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto label {
+    font-weight: bold;
+}
+
+.contacto input, 
+.contacto textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: "Inter", sans-serif;
+}
+
+.contacto button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #444;
+}
+
+.contacto p {
+    margin-top: 1rem;
+    text-align: center;
+}
