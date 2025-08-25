@@ -129,3 +129,33 @@ footer {
         margin: 1rem auto;
     }
 }
+/* Sección Currículum */
+.curriculum {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.curriculum h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "PlayfairDisplay", serif;
+}
+
+.curriculum h2 {
+    margin-top: 1.5rem;
+    font-family: "PlayfairDisplay", serif;
+}
+
+.curriculum ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .curriculum {
+        padding: 0 0.5rem;
+    }
+}
