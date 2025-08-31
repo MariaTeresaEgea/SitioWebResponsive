@@ -17,22 +17,19 @@
 /* Fuente por defecto (texto general) */
 body {
     font-family: "Inter", sans-serif;
+    line-height: 1.5;
 }
 
 /* Títulos con la fuente secundaria */
 h1, h2, h3 {
     font-family: "PlayfairDisplay", serif;
 }
-/* Reset básico */
+
+/* ----------------- Reset básico ----------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-    line-height: 1.5;
 }
 
 /* Header */
@@ -64,16 +61,96 @@ header nav a {
     display: none; /* Se mostrará solo en móvil más adelante */
 }
 
-/* Presentación */
-.presentacion {
+/* ----------------- Hero / Presentación ----------------- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 3rem 1rem;
+    background-color: #f2f2f2;
+    min-height: 100vh;
 }
 
-.presentacion img {
-    width: 150px;
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-family: 'PlayfairDisplay', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-photo {
+    width: 300px;
+    height: px;
     border-radius: 50%;
-    margin-top: 1rem;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid #42c4b1;
+
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #42c4b1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #369288;
+}
+/* Botón centrado */
+.presentacion .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #42c4b1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.presentacion .btn:hover {
+    background-color: #369288;
+}
+
+/* Responsive móvil */
+@media screen and (max-width: 768px) {
+    .presentacion img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .presentacion h1 {
+        font-size: 2rem;
+    }
+
+    .presentacion p {
+        font-size: 1rem;
+    }
+
+    .presentacion .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
@@ -84,6 +161,7 @@ footer {
     color: white;
     margin-top: 2rem;
 }
+
 footer a {
     color: white; 
     text-decoration: none;
@@ -104,40 +182,181 @@ footer a:hover {
 .proyectos h1 {
     margin-bottom: 2rem;
     font-family: "PlayfairDisplay", serif;
+    font-size: 2.5rem;
 }
 
+/* Contenedor de proyectos centrado */
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centra los proyectos */
+    gap: 1.5%; /* espacio entre ellos */
+}
+
+/* Cada proyecto */
 .proyecto {
-    display: inline-block;
     width: 30%;
     margin: 1%;
     padding: 1rem;
     background-color: #42c4b1;
     border-radius: 8px;
-    vertical-align: top;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Para altura uniforme */
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .proyecto img {
     width: 100%;
+    height: 180px; /* altura fija */
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .proyecto h3 {
     margin-top: 1rem;
     font-family: "PlayfairDisplay", serif;
+    font-size: 1.5rem;
 }
 
 .proyecto p {
     margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Botón Ver proyecto */
+.proyecto .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.proyecto .btn:hover {
+    background-color: #369288;
+    transform: scale(1.05);
 }
 
 /* Responsive: móviles */
 @media screen and (max-width: 768px) {
     .proyecto {
-        display: block;
         width: 90%;
         margin: 1rem auto;
+        height: auto; /* se ajusta al contenido */
+    }
+
+    .proyecto img {
+        height: 200px;
+    }
+
+    .proyecto h3 {
+        font-size: 1.3rem;
+    }
+
+    .proyecto p {
+        font-size: 0.95rem;
+    }
+
+    .proyecto .btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
     }
 }
+
+/* ----------------- Proyecto individual ----------------- */
+.proyecto-individual {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+.proyecto-individual h1 {
+    font-family: "PlayfairDisplay", serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.proyecto-individual img {
+    width: 80%;        /* ajusta el tamaño de la imagen */
+    max-width: 500px;  /* no se haga demasiado grande */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.proyecto-individual p {
+    font-size: 1.1rem;
+    text-align: justify; /* mantiene formato del texto */
+    margin-bottom: 1.5rem;
+}
+
+.proyecto-individual .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #42c4b1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.proyecto-individual .btn:hover {
+    background-color: #369288;
+    transform: scale(1.05);
+}
+
+/* Responsive: móviles */
+@media screen and (max-width: 768px) {
+    .proyecto-individual {
+        padding: 0 0.5rem;
+    }
+
+    .proyecto-individual h1 {
+        font-size: 2rem;
+    }
+
+    .proyecto-individual img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .proyecto-individual p {
+        font-size: 1rem;
+    }
+
+    .proyecto-individual .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
 /* Sección Currículum */
 .curriculum {
     max-width: 900px;
@@ -168,6 +387,7 @@ footer a:hover {
         padding: 0 0.5rem;
     }
 }
+
 /* Sección Contacto */
 .contacto {
     max-width: 600px;
@@ -218,6 +438,7 @@ footer a:hover {
     margin-top: 1rem;
     text-align: center;
 }
+
 /* Sección Privacidad */
 .privacidad {
     max-width: 800px;
@@ -268,7 +489,7 @@ footer a:hover {
     }
 }
 
-
+/* Popup de cookies */
 .cookie-popup {
     position: fixed;
     bottom: 20px;
