@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum - María Teresa Egea</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <header>
+    <h1>Currículum</h1>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">María Teresa Egea Valera</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="cv.html">Currículum</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="privacidad.html">Privacidad</a></li>
-            </ul>
-        </nav>
-        <button class="menu-toggle">☰</button>
-    </header>
+  <main>
+    <section>
+      <h2>Mi Currículum</h2>
+      <p>A continuación puedes ver mi currículum directamente en la web:</p>
+      
+      <!-- PDF incrustado -->
+      <iframe src="assets/pdf/curriculum.pdf" width="100%" height="700px" style="border: none;"></iframe>
 
-    <!-- Sección Currículum -->
-    <main>
-        <section class="currículum">
-            <h1>Currículum</h1>
+      <p>También puedes <a href="assets/pdf/curriculum.pdf" target="_blank">abrir el PDF en una nueva pestaña</a> si lo prefieres.</p>
+    </section>
+  </main>
 
-            <div class="formacion">
-                <h2>Formación</h2>
-                <ul>
-                    <li>Grado en Derecho por la Universidad de Murcia 2019-2023</li>
-                    <li>Máster en Abogacía y Procura 2023-2025</li>
-                    <li>Formacilión Profesional en Desarrollo de Aplicaciones Web 2025-Actualidad</li>
-                    <li>Grado en Psicología por la UNED 2020-Actualidad</li>
-                    <li>Certificado Auditor Líder ISO27001</li>
-                </ul>
-            </div>
-
-            <div class="experiencia">
-                <h2>Experiencia</h2>
-                <ul>
-                    <li>Consultoría en Derecho Tecnológico y Protección de Datos - LEGITEC - 2022-2025</li>
-                    <li>Ethical Compliance Officer - G's España - 2025-Actualidad</li>
-                    <li>Freelance consultoría jurídica-tecnológica - 2025-Actualidad</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 María Teresa Egea. Todos los derechos reservados.</p>
-    </footer>
-
+  <footer>
+    <p>&copy; 2025 María Teresa Egea</p>
+    <nav class="footer-links">
+      <a href="privacidad.html">Política de Privacidad</a> |
+      <a href="cookies.html">Política de Cookies</a> |
+      <a href="aviso-legal.html">Aviso Legal</a>
+    </nav>
+  </footer>
 </body>
 </html>
